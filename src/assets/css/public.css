@@ -1,0 +1,23 @@
+
+.html {
+  font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+  /*去掉谷歌字体最小为12px的问题*/
+  -webkit-text-size-adjust: 100%;
+  /*超链接的去除高亮*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  line-height: normal;
+  font-size: 0.24rem;
+  /*下滑更流畅*/
+  -webkit-overflow-scrolling: touch;
+}
