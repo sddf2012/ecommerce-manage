@@ -1,9 +1,13 @@
-import {get} from '../api'
+import {get, post} from '../api'
 const baseUrl = 'http://localhost:8002/goods/manage/category'
 
 function getCategoryByParentId (parentId) {
-  console.log('getCategoryByParentId' + Date.now())
-  return get(`${baseUrl}/search/${parentId}`, null)
+  return get(`${baseUrl}/searchAll/${parentId}`, null)
 }
-
-export {getCategoryByParentId}
+function removeNode (categoryId) {
+  return get(`${baseUrl}/deleteCategory/${categoryId}`, null)
+}
+function saveCategory (data) {
+  return post(`${baseUrl}/saveCategory`, null, data)
+}
+export {getCategoryByParentId, removeNode, saveCategory}

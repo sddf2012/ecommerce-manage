@@ -7,6 +7,9 @@ module.exports = [{
   }, {
     name: '商品属性',
     index: 'goodsAttr'
+  }, {
+    name: '分类属性',
+    index: 'goodsCategoryAttr'
   }
   ]
 }, {

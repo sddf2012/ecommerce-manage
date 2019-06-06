@@ -1,7 +1,5 @@
 import axios from 'axios'
-import {
-  Message
-} from 'element-ui'
+import {errMsg} from '@/assets/message'
 
 const instance = axios.create({
   // baseURL: 'http://localhost:8001/',
@@ -16,24 +14,15 @@ instance.interceptors.response.use(resp => {
     return data.data
   } else {
     let err = respCode + ' ' + respMsg
-    Message({
-      message: err,
-      type: 'error',
-      duration: 5 * 1000
-    })
+    errMsg(err)
     return Promise.reject(err)
   }
 }, error => {
-  Message({
-    message: error,
-    type: 'error',
-    duration: 5 * 1000
-  })
+  errMsg(error.message)
   return Promise.reject(error)
 })
 
 function get (url, params) {
-  console.log('get' + Date.now())
   return instance({
     url: url,
     method: 'get',

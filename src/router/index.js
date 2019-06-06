@@ -9,7 +9,7 @@ const getComponent = (name, component) => () => import(`@/views/${name}/${compon
 
 const myRoutes = [
   {
-    path: '/layout',
+    path: '/',
     name: '首页',
     component: Layout
   }

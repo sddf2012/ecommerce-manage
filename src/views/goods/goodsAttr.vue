@@ -1,5 +1,6 @@
 <template>
-<div></div>
+  <el-row :gutter="10">
+  </el-row>
 </template>
 
 <script>
