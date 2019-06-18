@@ -6,7 +6,7 @@
         <span v-text="item.name"></span>
       </template>
       <el-menu-item-group>
-        <el-menu-item v-for="subitem in item.sub" :index="subitem.index" :key="item.index+'-'+subitem.index">
+        <el-menu-item v-for="subitem in item.sub" :index="'/'+item.index+'/'+subitem.index" :key="item.index+'-'+subitem.index">
           {{subitem.name}}
         </el-menu-item>
       </el-menu-item-group>

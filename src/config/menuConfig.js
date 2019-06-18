@@ -3,13 +3,13 @@ module.exports = [{
   index: 'goods',
   sub: [{
     name: '商品分类',
-    index: 'goodsCategory'
+    index: 'category'
   }, {
     name: '商品属性',
-    index: 'goodsAttr'
+    index: 'attr'
   }, {
     name: '分类属性',
-    index: 'goodsCategoryAttr'
+    index: 'categoryAttr'
   }
   ]
 }, {

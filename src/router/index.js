@@ -5,7 +5,7 @@ import menus from '@/config/menuConfig'
 
 Vue.use(Router)
 
-const getComponent = (name, component) => () => import(`@/views/${name}/${component}.vue`)
+const getComponent = (name, detail, component) => () => import(`@/views/${name}/${detail}/${component}.vue`)
 
 const myRoutes = [
   {
@@ -18,9 +18,9 @@ const myRoutes = [
 // configMenu中的菜单
 function childRoute (name, path, directory, component) {
   return {
-    path: `/${path}`,
     name: name,
-    component: getComponent(directory, component)
+    path: path,
+    component: getComponent(directory, component, component)
   }
 }
 

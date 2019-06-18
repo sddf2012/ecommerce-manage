@@ -9,4 +9,16 @@ class GoodsCategorySaveVo {
   }
 }
 
-export {GoodsCategorySaveVo}
+class GoodsCategoryAttrSaveVo {
+  constructor (caId, categoryId, attrId, attrName, type, selected, operator) {
+    this.caId = caId
+    this.categoryId = categoryId
+    this.attrName = attrName
+    this.attrId = attrId
+    this.type = type
+    this.selected = selected
+    this.operator = operator
+  }
+}
+
+export {GoodsCategorySaveVo, GoodsCategoryAttrSaveVo}
