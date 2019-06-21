@@ -10,6 +10,9 @@ module.exports = [{
   }, {
     name: '分类属性',
     index: 'categoryAttr'
+  }, {
+    name: '商品管理',
+    index: 'spu'
   }
   ]
 }, {
